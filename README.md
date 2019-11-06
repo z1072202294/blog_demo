@@ -1,5 +1,6 @@
 # blog_demo
 需要下载的包和库
+alembic==1.3.0
 Click==7.0
 Flask==1.1.1
 Flask-Migrate==2.5.2

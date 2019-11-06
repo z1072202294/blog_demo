@@ -22,3 +22,12 @@
 
 # 这个包和库在 install.txt文件中
 # 下载方法 pip install -r install.txt 就行了
+
+# 还有就是要先通过命令来运行 manage.py 这个文件 操作方法
+# 先进入pycharm 把这个项目导进pycharm中
+# 然后点击 Terminal 在里面 先运行 pip install -r install.txt
+# 在运行 python manage.py db init
+# 后就会多出一个 migrations 这个文件夹
+# 然后 在运行 python manage.py db migrate
+# 最后 在运行 python manage.py db upgrade
+# 运行完成后 数据库就会有 user和question 这两个数据表

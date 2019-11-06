@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}详情-{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/detail.css') }}">
+{% endblock %}
+{% block main %}
+    <h3 class="page-title">{{ question.title }}</h3>
+    <p class="question-info">
+        <span>作者:&nbsp;{{ question.author.username }}</span>
+        <span>&nbsp;&nbsp;时间:&nbsp;{{ question.create_time }}</span>
+    </p>
+    <hr/>
+    <p class="question-content">{{ question.content }}</p>
+    <hr/>
+    <div class="form-group">
+        <a href="{{ url_for('change',question_id=question.id) }}" class="btn btn-primary">立即修改</a>
+        <a href="{{ url_for('del_question',question_id=question.id) }}" class="btn btn-primary">立即删除</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}修改{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/question_change.css') }}">
+{% endblock %}
+{% block main %}
+    <h3 class="page-title">{{ question.title }}</h3>
+    <p class="question-info">
+        <span>作者:&nbsp;{{ question.author.username }}</span>
+        <span id="span">&nbsp;&nbsp;时间:&nbsp;{{ question.create_time }}</span>
+    </p>
+    <form action="" method="post">
+        <div class="form-group">
+            <textarea name="content" class="form-control" rows="5"
+                      placeholder="请输入修改的内容">{{ question.content }}</textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">立即修改</button>
+        </div>
+        </div>
+    </form>
+{% endblock %}

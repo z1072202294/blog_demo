@@ -31,3 +31,5 @@
 # 然后 在运行 python manage.py db migrate
 # 最后 在运行 python manage.py db upgrade
 # 运行完成后 数据库就会有 user和question 这两个数据表
+
+# 运行接口为 app.py 文件
